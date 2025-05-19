@@ -1,5 +1,7 @@
-package com.sceen.utils.interceptor.datadensitize;
+package com.sceen.utils.interceptor.datadensitize.impl;
 
+import com.sceen.utils.interceptor.datadensitize.DesensitizeStrategy;
+import com.sceen.utils.interceptor.datadensitize.SensitiveTypeEnum;
 import org.springframework.stereotype.Component;
 
 /**

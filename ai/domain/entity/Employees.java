@@ -15,7 +15,8 @@ public class Employees implements Serializable {
     private static final long serialVersionUID = -61166745547834842L;
     
     private Integer id;
-    
+
+    @Sensitive(type = SensitiveTypeEnum.CHINESE_NAME)
     private String name;
     
     private Integer age;
