@@ -60,6 +60,9 @@ public class SensitiveDataInterceptor implements ResponseBodyAdvice<Object> {
 
         Field[] fields = obj.getClass().getDeclaredFields();
         for (Field field : fields) {
+            if (field.getDeclaringClass().getName().startsWith("java.util")) {
+                return; // 跳过 JDK 内置类字段
+            }
             field.setAccessible(true);
             if (field.isAnnotationPresent(Sensitive.class)) {
                 try {

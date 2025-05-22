@@ -1,6 +1,7 @@
 package com.sceen.utils.interceptor.datadensitize;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -19,7 +20,7 @@ public class DesensitizeStrategyFactory {
 
     private final Map<SensitiveTypeEnum, DesensitizeStrategy> strategyMap = new EnumMap<>(SensitiveTypeEnum.class);
 
-    @Autowired
+    @Resource
     private List<DesensitizeStrategy> strategies;
 
     @PostConstruct
